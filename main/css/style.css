@@ -1,0 +1,231 @@
+@charset "UTF-8";
+@import url(https://fonts.googleapis.com/css?family=Droid+Serif:400,400i,700,700i|Lato|Lobster+Two);
+body {
+  background: #3C2726;
+  color: #333;
+}
+
+nav {
+  position: fixed;
+  left: 0;
+  top: 100px;
+  width: 150px;
+}
+nav a {
+  color: rgba(255, 255, 255, 0.5);
+  display: block;
+  font: normal 1rem "Lobster Two", cursive;
+  line-height: 1.2;
+  padding: 5px;
+  text-decoration: none;
+}
+nav a span {
+  display: block;
+  font: normal 0.7rem "Lato", sans-serif;
+}
+nav a.active, nav a:hover {
+  color: #fff;
+}
+@media screen and (max-width: 768px) {
+  nav {
+    position: relative;
+    top: auto;
+    left: auto;
+    width: 100%;
+  }
+  nav::after {
+    clear: both;
+    content: "";
+    display: table;
+  }
+  nav a {
+    float: left;
+    text-align: center;
+    width: 23%;
+  }
+}
+
+section.document {
+  background: #E4D9C3;
+  box-shadow: #000 15px 15px 15px;
+  margin: 5% auto;
+  width: 75%;
+  min-width: 320px;
+}
+section.document header.title {
+  padding: 5%;
+  text-align: center;
+}
+section.document header.title h1 {
+  display: block;
+  font: bold 0.8rem/1 "Droid Serif", serif;
+  letter-spacing: 3px;
+  text-transform: uppercase;
+}
+section.document header.title strong {
+  display: block;
+  font-size: 150%;
+}
+section.document header.title strong:before, section.document header.title strong:after {
+  content: '\f005';
+  color: #D2C8AF;
+  display: inline;
+  font: normal 75%/1 "FontAwesome";
+}
+section.document header.title:after {
+  content: '——————————————';
+  color: #D2C8AF;
+  display: block;
+  font: normal 4rem/1 "Lobster Two", cursive;
+  letter-spacing: -15px;
+}
+section.document h2 {
+  display: none;
+  visibility: hidden;
+}
+
+section#preamble {
+  line-height: 1.5;
+  padding: 2.5% 5%;
+}
+section#preamble::after {
+  clear: both;
+  content: "";
+  display: table;
+}
+section#preamble p {
+  font-size: 1.5rem;
+  font-style: italic;
+  margin-bottom: 60px;
+}
+section#preamble strong {
+  float: left;
+  font: normal 3rem/1 "Lobster Two", cursive;
+  margin: -.3em .2em 0 0;
+}
+
+#amendments,
+#articles {
+  padding: 2.5%;
+}
+#amendments > h2,
+#articles > h2 {
+  display: none;
+  visibility: hidden;
+}
+
+header.article-header {
+  position: relative;
+  text-align: center;
+}
+header.article-header::after {
+  clear: both;
+  content: "";
+  display: table;
+}
+header.article-header h3.article-title {
+  font: bold 2.75rem/1 "Lobster Two", cursive;
+  margin: 0 0 .5em;
+}
+header.article-header h3.article-title:before, header.article-header h3.article-title:after {
+  content: '+ + + + + + + + + + + ';
+  color: #D2C8AF;
+  display: inline;
+  font: normal 75%/1 "FontAwesome";
+  margin: 0 1em;
+}
+@media screen and (max-width: 1000px) {
+  header.article-header h3.article-title:before, header.article-header h3.article-title:after {
+    display: none;
+    font-size: 50% !important;
+  }
+}
+header.article-header section.article-desc {
+  background: #87061C;
+  color: #fff;
+  font-family: "Lato", sans-serif;
+  font-size: .65rem;
+  font-weight: bold;
+  padding: 7px;
+  text-transform: uppercase;
+  position: absolute;
+  top: 13%;
+  left: -7%;
+}
+header.article-header section.article-desc:before {
+  left: 100%;
+  top: 50%;
+  border: solid transparent;
+  content: " ";
+  height: 0;
+  width: 0;
+  position: absolute;
+  pointer-events: none;
+  border-left-color: #87061C;
+  border-width: 12px;
+  margin-top: -12px;
+}
+
+article {
+  margin: 0 0 20px;
+}
+
+section.section {
+  line-height: 1.5;
+  margin: 0;
+  padding: 2.5%;
+}
+section.section .section-header {
+  font-family: "Droid Serif", serif;
+  font-size: 1.5rem;
+}
+section.section .section-header .section-title {
+  display: inline;
+  font-weight: bold;
+  text-transform: uppercase;
+}
+section.section .section-header .section-title:after {
+  content: '. ';
+}
+section.section .section-header div.section-desc {
+  color: #837254;
+  display: none;
+  font-style: italic;
+}
+section.section:hover {
+  background: rgba(255, 255, 255, 0.2);
+}
+section.section:hover .section-header div.section-desc {
+  display: inline;
+}
+section.section .section-text p {
+  font: normal 1.1rem/2.2 "Lato", sans-serif;
+  margin: 0 0 .5em;
+}
+section.section .section-text ul {
+  font: normal 1.1rem/1.5 "Lobster Two", cursive;
+  list-style: none;
+  margin: 0 0 .5em;
+  text-align: center;
+  text-indent: 0;
+}
+section.section .section-text ol {
+  font: normal 0.9rem/1.5 "Lato", sans-serif;
+  list-style: decimal;
+  margin: 0 0 .5em 2em;
+  text-indent: 0;
+}
+section.section .section-text li {
+  margin-bottom: .5em;
+}
+
+footer {
+  color: #fff;
+  font: normal 0.9rem/1.5 "Lobster Two", cursive;
+  margin: 0 2.5% 2.5%;
+  text-align: center;
+}
+footer a {
+  color: #fff;
+  text-decoration: none;
+}
